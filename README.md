@@ -21,14 +21,9 @@ consequential result.
 
 A useful consultation should change or confirm a consequential next action. It
 should identify the weakest assumption, the missing evidence, the simplest safe
-approach, or the acceptance gate that determines whether to continue. The skill
-also tells the executor to separate facts from interpretations, include
-counterevidence, and avoid leading the advisor toward a preferred answer.
-
-The advisor never owns execution or permissions. It does not edit, publish,
-deploy, or turn its recommendation into evidence. The executor verifies the
-advice against primary sources, performs the work, and remains accountable for
-the final result.
+approach, or the acceptance gate that determines whether to continue. The
+executor supplies counterevidence, verifies the advice against primary sources,
+and retains ownership of execution and permissions.
 
 ## Install
 
