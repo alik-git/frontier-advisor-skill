@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontier Advisor"
+  short_description: "Escalate key decisions to a stronger model"
+  default_prompt: "Use $frontier-advisor to consult a stronger model at the next consequential decision point, then continue as the executor."
