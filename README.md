@@ -14,7 +14,6 @@ consequential result.
 - Prefer a host's native advisor tool when one exists.
 - Otherwise use one stronger, read-only subagent in the foreground.
 - Send a compact, specific brief instead of an entire transcript.
-- Normally allow no more than two consultations per task.
 - Skip trivial, mechanical, and directly reactive work.
 - Switch the main model when frontier capability is needed throughout the task.
 

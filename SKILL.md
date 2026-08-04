@@ -44,14 +44,10 @@ Ask for a decisive recommendation, key risk, missing evidence, and next action
 in about 200 words. Do not send the whole conversation unless the native tool
 does so automatically.
 
-## Bound the spend
+## Review before publishing
 
-- Normally use at most two consultations: one for direction and one for a
-  difficult correction or consequential completion review.
-- Allow one extra reconciliation call only when primary evidence contradicts
-  the advice.
-- Save local work and gather verification before a completion review, but do
-  not commit, push, deploy, or otherwise publish merely to prepare the review.
+Save local work and gather verification before a completion review, but do not
+commit, push, deploy, or otherwise publish merely to prepare the review.
 
 Give the advice serious weight. Override it only with primary-source evidence
 or an empirical failure, and surface any unresolved conflict rather than
