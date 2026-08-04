@@ -27,32 +27,40 @@ and retains ownership of execution and permissions.
 
 ## Install
 
-Clone the repository, enter its root directory, then link that directory into
-the user-level skill directory used by your agent.
-
-### Codex
+### Codex ([skill docs](https://developers.openai.com/codex/skills))
 
 ```bash
-mkdir -p ~/.agents/skills
-ln -s "$PWD" ~/.agents/skills/frontier-advisor
+mkdir -p ~/.agents/skills && \
+git clone https://github.com/alik-git/frontier-advisor-skill.git \
+  ~/.agents/skills/frontier-advisor
 ```
 
-### Claude Code
+### Claude Code ([skill docs](https://code.claude.com/docs/en/skills))
 
 ```bash
-mkdir -p ~/.claude/skills
-ln -s "$PWD" ~/.claude/skills/frontier-advisor
+mkdir -p ~/.claude/skills && \
+git clone https://github.com/alik-git/frontier-advisor-skill.git \
+  ~/.claude/skills/frontier-advisor
 ```
 
-Claude Code installations with the native Advisor tool will use that path
-instead of creating a subagent. Restart the agent if it does not discover the
-new skill automatically.
+Both hosts detect installed skills automatically. If the skill does not appear,
+restart the agent.
 
-## Model setup
+## Use
 
-Choose a capable lower-cost model as the main executor and configure a stronger
-model as the advisor. Exact model names and configuration surfaces vary by host,
-so the skill intentionally does not hard-code them.
+- In Codex, mention `$frontier-advisor` or let Codex invoke it automatically.
+- In Claude Code, run `/frontier-advisor` or let Claude invoke it automatically.
+
+## Compatibility and model setup
+
+The shared `SKILL.md` follows the Agent Skills standard. `agents/openai.yaml`
+adds first-class Codex and ChatGPT UI metadata; Claude Code reads the shared
+skill and ignores that optional host-specific file.
+
+Choose a lower-cost main model and configure a stronger advisor through the
+host. The skill prefers a native Advisor tool when available and otherwise uses
+a stronger read-only subagent. Exact model names and settings vary, so none are
+hard-coded here.
 
 ## License
 
