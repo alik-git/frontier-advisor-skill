@@ -1,4 +1,6 @@
 interface:
   display_name: "Frontier Advisor"
-  short_description: "Escalate key decisions to a stronger model"
+  short_description: "Explicit stronger-model consultation"
   default_prompt: "Use $frontier-advisor to challenge the current approach at the next consequential decision point, then continue as the executor."
+policy:
+  allow_implicit_invocation: false

@@ -1,12 +1,17 @@
 ---
 name: frontier-advisor
-description: "Use automatically for substantive multi-step work where a lower-cost executor benefits from stronger judgment: before committing to a consequential approach, after recurring or contradictory failures, when changing strategy, or before declaring risky work complete. Use for architecture, migrations, cross-repository or interface changes, security or safety questions, expensive operations, and difficult debugging. Skip trivial, mechanical, or directly reactive work, and skip tasks that need the strongest model on every turn."
+description: "Use only when the user explicitly asks for frontier-advisor, an advisor consultation, or a stronger-model review. Do not invoke automatically based on task complexity."
 ---
 
 # Frontier Advisor
 
 Remain the executor. Use a stronger model for judgment, not labor; keep file
 edits, commands, tests, and the user-facing answer in this session.
+
+## Invocation
+
+Use this skill only when the user explicitly requests an advisor consultation.
+Do not infer invocation from task complexity, risk, failures, or model choice.
 
 ## Consult at decision points
 
