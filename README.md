@@ -1,7 +1,7 @@
 # Frontier Advisor
 
-A portable Agent Skill for pairing a lower-cost executor model with a stronger
-advisor model at important decision points.
+A portable Agent Skill for explicitly requesting a stronger advisor model at
+important decision points.
 
 The executor keeps ownership of the task: it reads files, runs tools, edits,
 tests, and writes the final answer. The advisor is used only for judgment—such
@@ -10,6 +10,7 @@ consequential result.
 
 ## Design principles
 
+- Run only when the user explicitly requests an advisor consultation.
 - Orient with read-only evidence before asking for advice.
 - Prefer a host's native advisor tool when one exists.
 - Otherwise use one stronger, read-only subagent in the foreground.
@@ -43,21 +44,21 @@ git clone https://github.com/alik-git/frontier-advisor-skill.git \
   ~/.claude/skills/frontier-advisor
 ```
 
-Both hosts detect installed skills automatically. If the skill does not appear,
-restart the agent.
+Both hosts detect installed skills automatically. The skill remains dormant
+until explicitly invoked. If the skill does not appear, restart the agent.
 
 ## Use
 
-- In Codex, mention `$frontier-advisor` or let Codex invoke it automatically.
-- In Claude Code, run `/frontier-advisor` or let Claude invoke it automatically.
+- In Codex, mention `$frontier-advisor`.
+- In Claude Code, run `/frontier-advisor`.
 
 ## Compatibility and model setup
 
 The shared `SKILL.md` follows the Agent Skills standard. `agents/openai.yaml`
-adds first-class Codex and ChatGPT UI metadata; Claude Code reads the shared
-skill and ignores that optional host-specific file.
+adds first-class Codex and ChatGPT UI metadata and disables implicit invocation;
+Claude Code reads the shared skill and ignores that optional host-specific file.
 
-Choose a lower-cost main model and configure a stronger advisor through the
+Configure a genuinely stronger or meaningfully independent advisor through the
 host. The skill prefers a native Advisor tool when available and otherwise uses
 a stronger read-only subagent. Exact model names and settings vary, so none are
 hard-coded here.
